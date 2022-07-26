@@ -1,7 +1,7 @@
 abstract class Widget {
-  protected baseNode: Node;
+  protected baseElement: HTMLElement;
 
-  abstract render(): Node;
+  abstract render(): HTMLElement;
   abstract applyEvents(): void;
 }
 

@@ -3,22 +3,23 @@ import Gift from './widgets/gift';
 import Widget from './widgets/widget';
 
 class Application {
-
-  private video: HTMLVideoElement;
-
   private widgets: Widget[];
 
-  constructor(
-    protected baseDocument: Document
-  ) {
-    this.video = baseDocument.querySelector('video');
+  constructor() {
+    this.widgets = [
+      new Gift(),
+    ]
   }
 
   public run(): void {
-    const gift = new Gift();
-    this.baseDocument.body.append(gift.render());
-    gift.applyEvents();
+    for (let w of this.widgets) {
+      document.body.append(w.render());
+      w.applyEvents();
+    }
+    this.applyCloseEvent();
+  }
 
+  private applyCloseEvent() {
     document.querySelectorAll('.SA_widget_close').forEach(el => {
       el.addEventListener('click', e => {
         const element = el.parentNode.parentNode.querySelector('.SA_widget_container');
@@ -29,7 +30,7 @@ class Application {
           element.classList.add("SA_hidden");
         }
       });
-    })
+    });
   }
 
 }
