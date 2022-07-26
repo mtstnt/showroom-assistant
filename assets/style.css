@@ -1,0 +1,7 @@
+.SA_widget {
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  z-index: 99999;
+  background-color: #ccc;
+}

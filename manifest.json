@@ -1,0 +1,20 @@
+{
+  "name": "Showroom Assistant",
+  "description": "Showroom toolkit",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "js": ["loader.js"],
+      "css": ["assets/style.css"],
+      "matches": ["*://*.showroom-live.com/r/*"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dist/main.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

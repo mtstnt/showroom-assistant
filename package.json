@@ -1,0 +1,17 @@
+{
+  "name": "showroom-assistant-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/vhtml": "^2.2.4",
+    "esbuild": "^0.14.50",
+    "vhtml": "^2.2.0"
+  }
+}
