@@ -6,6 +6,7 @@ import dragElement from '../utils/draggable';
 
 class Gift extends Widget {
   private starButtonIdentifier = 'data-v-5bfe3b66';
+  protected startTop: string = "50px";
 
   private stars = [
     { name: "Yellow", image: "https://image.showroom-cdn.com/showroom-prod/assets/img/gift/1_s.png?1657696588", index: 0 },
@@ -21,12 +22,12 @@ class Gift extends Widget {
 
   public render(): HTMLElement {
     return this.baseElement = toNode(
-      <div class="SA_widget SA_widget__gift">
+      <div class="SA_widget SA_widget__gift" style={`left:${this.startLeft};top:${this.startTop}`}>
         <div class="SA_widget_header">
           <h3 class="SA_widget_title">Gifts</h3>
           <button class="SA_widget_close">&#10006;</button>
         </div>
-        <div class="SA_widget_container">
+        <div class="SA_widget_container SA_hidden">
           {this.stars.map(el => (
             <button style="text-align: center" data-index={el.index}>
               <img src={el.image} alt={el.name} /> <br />
@@ -51,7 +52,7 @@ class Gift extends Widget {
           if (counter > 10) {
             clearInterval(interval);
           }
-        }, 150);
+        }, 200);
       });
     }); 
 

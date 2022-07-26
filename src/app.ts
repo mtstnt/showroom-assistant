@@ -1,6 +1,6 @@
 import Gift from './widgets/gift';
 import Widget from './widgets/widget';
-import Window from './widgets/window';
+import Room from './widgets/room';
 
 class Application {
   private widgets: Widget[];
@@ -8,7 +8,7 @@ class Application {
   constructor() {
     this.widgets = [
       new Gift(),
-      new Window(),
+      new Room(),
     ]
   }
 

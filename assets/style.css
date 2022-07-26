@@ -1,9 +1,7 @@
+/* ==== GLOBAL ==== */
 .SA_widget {
-  position: absolute;
-  left: 10px;
-  top: 100px;
+  position: fixed;
   z-index: 99999;
-  padding: 20px;
 
   color: #000;
   background-color: #fff;
@@ -24,9 +22,41 @@
   float: right;
 }
 
+.SA_widget_header {
+  padding: 20px;
+  cursor: all-scroll;
+}
+
+.SA_widget_container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/* ==== WIDGETS ==== */
 /* Windowing */
-.SA_widget__window .SA_widget_container {
+.SA_widget__room .SA_widget_container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.SA_widget__room .SA_widget_container button {
+  width: 200px;
+  padding: 10px;
+}
+
+.SA_widget__room .SA_resize input {
+  width: 100px;
+  padding: 5px;
+}
+
+.SA_widget__room #SA_resize_width {
+  margin-right: 10px;
+}
+
+.SA_widget__room h5,
+.SA_widget__room .SA_widget_container button {
+  margin-bottom: 10px;
+  display: block;
 }
