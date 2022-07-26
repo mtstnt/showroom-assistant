@@ -18,6 +18,18 @@ class Application {
     const gift = new Gift();
     this.baseDocument.body.append(gift.render());
     gift.applyEvents();
+
+    document.querySelectorAll('.SA_widget_close').forEach(el => {
+      el.addEventListener('click', e => {
+        const element = el.parentNode.parentNode.querySelector('.SA_widget_container');
+
+        if (element.classList.contains("SA_hidden")) {
+          element.classList.remove("SA_hidden");
+        } else {
+          element.classList.add("SA_hidden");
+        }
+      });
+    })
   }
 
 }

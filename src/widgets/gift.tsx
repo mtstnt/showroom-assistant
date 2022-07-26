@@ -15,8 +15,11 @@ class Gift extends Widget {
   public render(): Node {
     return this.baseNode = toNode(
       <div class="SA_widget SA_widget__gift">
-        <h3>Gifts</h3>
-        <div class="SA_widget__gift_container">
+        <div class="SA_widget_header">
+          <h3 class="SA_widget_title">Gifts</h3>
+          <button class="SA_widget_close">&#10006;</button>
+        </div>
+        <div class="SA_widget_container">
           {this.stars.map(el => (
             <button style="text-align: center">
               <img src={el.image} alt={el.name} /> <br />

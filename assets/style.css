@@ -8,3 +8,16 @@
   color: #000;
   background-color: #fff;
 }
+
+.SA_hidden {
+  display: none;
+}
+
+.SA_widget_title {
+  display: inline;
+  margin-right: 20px;
+}
+
+.SA_widget_close {
+  float: right;
+}
