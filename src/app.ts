@@ -1,6 +1,6 @@
-import toNode from './utils/to_node';
 import Gift from './widgets/gift';
 import Widget from './widgets/widget';
+import Window from './widgets/window';
 
 class Application {
   private widgets: Widget[];
@@ -8,6 +8,7 @@ class Application {
   constructor() {
     this.widgets = [
       new Gift(),
+      new Window(),
     ]
   }
 
@@ -23,7 +24,8 @@ class Application {
     document.querySelectorAll('.SA_widget_close').forEach(el => {
       el.addEventListener('click', e => {
         const element = el.parentNode.parentNode.querySelector('.SA_widget_container');
-
+        console.log(element);
+        
         if (element.classList.contains("SA_hidden")) {
           element.classList.remove("SA_hidden");
         } else {

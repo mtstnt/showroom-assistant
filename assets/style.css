@@ -7,10 +7,12 @@
 
   color: #000;
   background-color: #fff;
+
+  border-radius: 10px;
 }
 
 .SA_hidden {
-  display: none;
+  display: none !important;
 }
 
 .SA_widget_title {
@@ -20,4 +22,11 @@
 
 .SA_widget_close {
   float: right;
+}
+
+/* Windowing */
+.SA_widget__window .SA_widget_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
